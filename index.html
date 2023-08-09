@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;500&display=swap"
+    />
+  </head>
+  <body>
+    <section class="audi-2nd">
+      <section class="frame-parent">
+        <div class="lean-staffing-and-manual-follo-parent">
+          <div class="lean-staffing-and" data-animate-on-scroll>
+            Lean Staffing and Manual Follow-Up Create Lost Opportunities in a
+            Tight Market
+          </div>
+          <div class="concerned-about-an-container" data-animate-on-scroll>
+            <p class="concerned-about-an">
+              Concerned about an uncertain economic environment and fluctuating
+              demand, the team at Audi Denver needed to control costs while
+              improving productivity, and that meant doing more with an
+              already-lean staff. Attempting to respond to every inquiry, follow
+              up with each lead, send and answer emails, handle routine
+              questions set up appointments, and track every channel (while
+              delivering a great experience for every shopper) was straining
+              team resources - and impeding their ability to prioritize
+              ready-to-buy customers. Increasingly, the team had to make
+              judgment calls about which opportunities to chase and which leads
+              to drop. Staff members were forced to abandon lea ds that had been
+              sitting in the CRM for some time, including shoppers who took
+              longer to respond or had gone dark.
+            </p>
+            <p class="concerned-about-an"></p>
+            <p class="concerned-about-an">
+              The result? Lead follow-up dwindled to ju st a few days -yet those
+              are precisely the opportunities that become a key source of
+              business when the market begins to cool.
+            </p>
+          </div>
+        </div>
+        <div
+          class="we-were-already-seeing-early-s-parent"
+          data-animate-on-scroll
+        >
+          <h3 class="we-were-already" data-animate-on-scroll>
+            "We were already seeing early signs of a decline in leads, and with
+            backlogged inventory finally coming in, we needed to make
+            conservative decisions abdut costs - especially overhead and
+            staffing. We're always busy, so this was stretch- ing our sales
+            teams thinner than ever. We needed solutions to help us be more
+            productive and eficient - without adding headcount!”
+          </h3>
+          <div class="stephen-powers-vice-president-parent">
+            <div class="stephen-powers-vice" data-animate-on-scroll>
+              Stephen Powers, Vice President of Operations, McDonald Audi
+            </div>
+            <img
+              class="mcdonald-icon"
+              alt=""
+              src="./public/mcdonald.svg"
+              data-animate-on-scroll
+            />
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <script>
+      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+      var observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+      
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+      }
+      </script>
+  </body>
+</html>
